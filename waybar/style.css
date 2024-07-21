@@ -1,0 +1,112 @@
+@define-color bg-color #080214;
+/*@define-color bg-color rgba(0, 0, 0, 0.8);*/
+@define-color bg-color-2 #141621;
+
+@define-color fg-color #FF5A2C;
+@define-color fg-color-2 #24283d;
+@define-color fg-color-3 #1DD516;
+@define-color fg-color-4 #7e4dcc;
+@define-color fg-color-5 #F8C63D;
+@define-color fg-color-6 #b4befe;
+@define-color fg-color-7 #DD534C;
+@define-color fg-color-8 #9BBC59;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono NF;
+    /*font-family: KodeMonoNerdFont;*/
+    font-size: 15px;
+    min-height: 0;
+    opacity: 1.0;
+
+}
+
+window#waybar {
+    background-color: @bg-color;
+    border-bottom: none;
+}
+
+#tags button.focused {
+    color: @fg-color;
+    background-color: @bg-color-2;
+    border-bottom: 1px solid @fg-color
+}
+
+#tags button {
+    padding: 5 15px;
+    background-color: transparent;
+    color: @fg-color-3;
+}
+
+#tray {
+    padding: 0 10px;
+    background-color: transparent;
+    /*color: @fg-color;*/
+}
+
+#custom-clock-icon {
+    padding: 0 15 0 10px;
+    background-color: transparent;
+    color: @fg-color-4;
+}
+
+#clock {
+    padding: 0 10 0 0px;
+    background-color: transparent;
+    color: @fg-color-4;
+}
+
+#custom-backlight-icon {
+    padding: 0 10 0 10px;
+    background-color: transparent;
+    color: @fg-color-5;
+}
+
+#backlight {
+    padding: 0 10 0 0px;
+    background-color: transparent;
+    color: @fg-color-5;
+}
+
+#battery {
+    padding: 0 15px;
+    background-color: transparent;
+    color: @fg-color-8;
+}
+
+#custom-pulseaudio-icon {
+    padding: 0 15 0 10px;
+    background-color: transparent;
+    color: @fg-color-6;
+}
+
+#pulseaudio {
+    padding: 0 10 0 0px;
+    background-color: transparent;
+    color: @fg-color-6;
+}
+
+#custom-cpu-icon {
+    padding: 0 10 0 5px;
+    background-color: transparent;
+    color: @fg-color-7;
+}
+
+#cpu {
+    padding: 0 10 0 5px;
+    background-color: transparent;
+    color: @fg-color-7;
+}
+
+#custom-memory-icon {
+    padding: 0 10 0 10px;
+    background-color: transparent;
+    color: @fg-color-7;
+}
+
+#memory {
+    padding: 0 20 0 10px;
+    background-color: transparent;
+    color: @fg-color-7;
+}

@@ -1,0 +1,19 @@
+set font "FiraCodeNerdFont 11"
+set selection-notification	"true"
+set selection-clipboard		"clipboard"
+set guioptions			    "sv"
+set scroll-page-aware		"true"
+set statusbar-home-tilde	"true"
+set adjust-open			    "width"
+set statusbar-h-padding		8
+set statusbar-v-padding		8
+
+set completion-bg		    rgba(0,0,0,0)
+set completion-fg		    "#f2f4f8"
+set completion-highlight-bg	"#535353"
+set completion-highlight-fg	"#f2f4f8"
+set completion-group-bg		rgba(0,0,0,0)
+set completion-group-fg		"#8cb6ff"
+
+set statusbar-fg		    "#f2f4f8"
+set statusbar-bg		    rgba(0,0,0,0)
