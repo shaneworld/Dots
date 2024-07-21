@@ -1,7 +1,7 @@
 if status is-interactive
   status --is-interactive; and source (pyenv init - | source)
   nitch
-  nvm use latest
+  nvm use latest -s
   set -g fish_greeting
   alias vim "nvim"
   alias y "yazi"
