@@ -10,3 +10,6 @@ conf.d
 fish_plugins
 fish_variables
 functions
+gtk-3.0
+QtProject.conf
+obs-studio

@@ -16,3 +16,7 @@ if status is-interactive
   set -gx EDITOR nvim
   set -gx GIT_EDITOR nvim
 end
+
+function sdk
+    bash -c "source '$HOME/.sdkman/bin/sdkman-init.sh'; sdk $argv[1..]"
+end

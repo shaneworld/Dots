@@ -15,7 +15,7 @@
 | file browser | [Yazi](https://github.com/sxyazi/yazi) |
 | editor | neovim<br>[NvChad](https://nvchad.com/) |
 | launcher | wofi |
-| status bar | waybar |
+| status bar | waybar-cava |
 | terminal | kitty<br>foot |
 | terminal tools | exa<br>tmux|
 | shell | fish |
