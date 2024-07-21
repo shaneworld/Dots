@@ -115,16 +115,16 @@
       "max-length": "4",
       "format": "{icon} {percent}%",
       "format-icons": [
-        "󱩎",
-        "󱩏",
-        "󱩐",
-        "󱩑",
-        "󱩒",
-        "󱩓",
-        "󱩔",
-        "󱩕",
-        "󱩖",
-        "󰛨"
+        "󱩎 ",
+        "󱩏 ",
+        "󱩐 ",
+        "󱩑 ",
+        "󱩒 ",
+        "󱩓 ",
+        "󱩔 ",
+        "󱩕 ",
+        "󱩖 ",
+        "󰛨 "
       ],
       "on-scroll-up": "brightnessctl set 10%-",
       "on-scroll-down": "brightnessctl set +10%"
