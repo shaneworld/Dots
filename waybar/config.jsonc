@@ -1,116 +1,131 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    //"gtk-layer-shell": true,
-    // Choose the order of the modules
-    "modules-left": ["river/tags"],
-    // "modules-center": ["mpd"],
-    "modules-right": ["custom/separator", "custom/memory-icon", "memory", "custom/cpu-icon", "cpu", "custom/separator", "custom/pulseaudio-icon", "pulseaudio", "custom/separator", "custom/backlight-icon", "backlight", "custom/separator", "battery", "custom/separator", "custom/clock-icon", "clock", "custom/separator", "tray"],
-    // Modules configuration
-    "river/tags": {
-        "num-tags": 5,
-        "set-tags": [
-          2147483649,
-          2147483650,
-          2147483652,
-          2147483656,
-          2147483664
-        ]
-    },
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 5,
+    "margin-right": 5,
+    "modules-left": ["custom/launcher","cpu","memory"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"],
 
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
-
-    "custom/clock-icon": {
-        "exec": "echo ' '",
-        "format": "{}",
-        "tooltip": false
-    },
-
-    "clock": {
-        "format": "{:%Y-%m-%d %H:%M}",
-        "tooltip": false
-    },
-
-    "custom/cpu-icon": {
-        "exec": "echo ' '",
-        "format": "{}",
-        "tooltip": false
-    },
-
-    "cpu": {
-        "interval": 5,
-        "format": "{usage}%"
-    },
-
-    "custom/memory-icon": {
-        "exec": "echo ' '",
-        "format": "{}",
-        "tooltip": false
+    "hyprland/workspaces": {
+      "on-click": "activate",
+      "format": "{icon}",
+      "format-icons": {
+        "default": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "active": "󱓻",
+        "urgent": "󱓻",
+      },
+      "persistent_workspaces": {
+        "*": 7,
+      }
     },
 
     "memory": {
-        "interval": 5,
-        "format": "{used}GB" // Icon: memory
+      "interval": 3,
+      "format": "   {}% ",
+      "max-length": 10
     },
 
-    "custom/backlight-icon": {
-        "exec": "echo '󰛨 '",
-        "format": "{}",
-        "tooltip": false
+    "cpu": {
+      "interval": 1,
+      "format": "   {}% ",
+      "max-length": 10
+    },
+
+    "tray": {
+      "spacing": 10
+    },
+
+    "clock": {
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%a, %d %b %Y}",
+      "format": "{:%H:%M}",
+      "calendar": {
+                  "weeks-pos"     : "none",
+                  "on-scroll"     : 1,
+                  "format": {
+                            "months":     "<span color='#8fbcbb'><b>{}</b></span>",
+                            "days":       "<span color='#8a909e'>{}</span>",
+                            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                            "weekdays":   "<span color='#81a1c1'><b>{}</b></span>",
+                            "today":      "<span color='#88c0d0'><b>{}</b></span>"
+                            }
+                  },
+      "actions":  {
+                  "on-click-right": "none",
+                  "on-click-forward": "tz_up",
+                  "on-click-backward": "tz_down",
+                  "on-scroll-up": "shift_up",
+                  "on-scroll-down": "shift_down"
+                  }
+    },
+
+    "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "nospacing": 1,
+      "format-muted": "󰝟 Muted",
+      "format-icons": {
+        "headphone": " ",
+        "default": ["󰕿", "󰖀", "󰕾"]
+      },
+      "on-click": "pamixer -t",
+      "on-click-right": "pavucontrol",
+      "scroll-step": 5
+    },
+
+    "custom/launcher": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "systemctl suspend"
+    },
+
+    "battery": {
+      "interval": 1,
+      // Connected to AC
+      "format": "󰂄 {capacity}%", // Icon: bolt
+      // Not connected to AC
+      "format-discharging": "{icon} {capacity}%",
+      "format-icons": [
+          "󰁺",
+          "󰁻",
+          "󰁼",
+          "󰁽",
+          "󰁾",
+          "󰁿",
+          "󰂀",
+          "󰂁",
+          "󰂂",
+          "󱟢"
+      ],
+      "tooltip": false
     },
 
     "backlight": {
       "max-length": "4",
-      "format": "{percent}%",
+      "format": "{icon} {percent}%",
+      "format-icons": [
+        "󱩎",
+        "󱩏",
+        "󱩐",
+        "󱩑",
+        "󱩒",
+        "󱩓",
+        "󱩔",
+        "󱩕",
+        "󱩖",
+        "󰛨"
+      ],
       "on-scroll-up": "brightnessctl set 10%-",
       "on-scroll-down": "brightnessctl set +10%"
     },
 
-    "battery": {
-        "interval": 1,
-        //"states": {
-        //    "warning": 30,
-        //    "critical": 15
-        //},
-        // Connected to AC
-        "format": "󰂄  {capacity}%", // Icon: bolt
-        // Not connected to AC
-        "format-discharging": "{icon}  {capacity}%",
-        "format-icons": [
-            "󰁺",
-            "󰁻",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰂂",
-            "󱟢"
-        ],
-        "tooltip": false
-    },
-
-    "custom/pulseaudio-icon": {
-        "exec": "echo ' '",
-        "format": "{}",
-        "tooltip": false
-    },
-
-    "pulseaudio": {
-        "format": "{volume}%",
-        "format-muted": "Muted",
-        "tooltip": false,
-        "on-click": "pavucontrol"
-    },
-
-    "custom/separator": {
-        "exec": "echo '|'",
-        "interval": 600,
-        "format": "{}",
-        "tooltip": false
-    }
 }
+

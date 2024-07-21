@@ -2,7 +2,7 @@
 
 | Functions | Packages |
 |:--------:|:----:|
-| utils | cliphist<br>brightnessctl<br>pamixer<br>bluez<br>bluez-utils<br>blueman |
+| utils | cliphist<br>brightnessctl<br>pamixer<br>bluez<br>bluez-utils<br>blueman<br>pavucontrol |
 | system info | [nitch](https://github.com/ssleert/nitch) |
 | sddm theme | qt5-quickcontrols<br>qt5-graphicaleffects<br>[sddm-chili](https://github.com/MarianArlt/sddm-chili)|
 | gtk icon theme | papirus icon theme |
@@ -19,5 +19,5 @@
 | terminal | kitty<br>foot |
 | terminal tools | exa<br>tmux|
 | shell | fish |
-| fish plugins | [fisher](https://github.com/jorgebucaran/fisher)<br>[z](https://github.com/jethrokuan/z)<br>[autols](https://github.com/yuys13/autols.fish)<br>[Done](https://github.com/franciscolourenco/done)<br>[autopair](https://github.com/jorgebucaran/autopair.fish)<br>[nvm.fish](https://github.com/jorgebucaran/nvm.fish)<br>[sdkman-for-fish](https://github.com/reitzig/sdkman-for-fish) |
+| fish plugins | [fisher](https://github.com/jorgebucaran/fisher)<br>[pure.fish](https://github.com/pure-fish/pure)<br>[z](https://github.com/jethrokuan/z)<br>[autols](https://github.com/yuys13/autols.fish)<br>[Done](https://github.com/franciscolourenco/done)<br>[autopair](https://github.com/jorgebucaran/autopair.fish)<br>[nvm.fish](https://github.com/jorgebucaran/nvm.fish)<br>[sdkman-for-fish](https://github.com/reitzig/sdkman-for-fish) |
 | VPN | [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) |

@@ -1,6 +1,6 @@
 mode=drun
 allow_images=true
-image_size=40
+image_size=30
 term=kitty
 insensitive=true
 location=center
