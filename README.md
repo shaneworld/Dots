@@ -22,11 +22,11 @@
 | file browser  | [Yazi](https://github.com/sxyazi/yazi)                                             |
 | editor        | neovim  [NvChad](https://nvchad.com/)                                              |
 | launcher      | wofi                                                                               |
-| status bar    | waybar-cava                                                                        |
+| status bar    | waybar                                                                        |
 | terminal      | kitty  foot                                                                        |
-| tools         | exa  tmux cava-git                                                                         |
+| tools         | exa  tmux rbenv(aur) ruby-build(aur)                                      |
 | shell         | fish                                                                               |
-| fish plugins  | [fisher](https://github.com/jorgebucaran/fisher)  [pure](https://github.com/pure-fish/pure)  [z](https://github.com/jethrokuan/z)  [autols](https://github.com/yuys13/autols.fish)  [Done](https://github.com/franciscolourenco/done)  [autopair](https://github.com/jorgebucaran/autopair.fish)  [nvm](https://github.com/jorgebucaran/nvm.fish)  [sdkman-for-fish](https://github.com/reitzig/sdkman-for-fish) |
+| fish plugins  | [fisher](https://github.com/jorgebucaran/fisher)  [pure](https://github.com/pure-fish/pure)  [z](https://github.com/jethrokuan/z)  [autols](https://github.com/yuys13/autols.fish)  [Done](https://github.com/franciscolourenco/done)  [autopair](https://github.com/jorgebucaran/autopair.fish)  [nvm](https://github.com/jorgebucaran/nvm.fish)  [sdkman-for-fish](https://github.com/reitzig/sdkman-for-fish) [rbenv](https://github.com/rbenv/fish-rbenv) |
 | VPN           | [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)              |
 
 </div>

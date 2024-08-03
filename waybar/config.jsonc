@@ -4,7 +4,7 @@
     "margin-top": 5,
     "margin-left": 5,
     "margin-right": 5,
-    "modules-left": ["custom/launcher", "cpu", "memory", "cava"],
+    "modules-left": ["custom/launcher", "cpu", "memory"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"],
 

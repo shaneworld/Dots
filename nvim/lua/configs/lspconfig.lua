@@ -2,6 +2,7 @@ local configs = require "nvchad.configs.lspconfig"
 local servers = {
   html = {},
   bashls = {},
+  lemminx = {},
   rust_analyzer = {},
   clangd = {},
   jdtls = {},
