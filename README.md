@@ -18,7 +18,7 @@
 | input method  | fcitx5-im  fcitx5-rime  fcitx5-material-color  [雾凇拼音](https://github.com/Mark24Code/rime-auto-deploy) |
 | pdf reader    | zathura  zathura-pdf-mupdf  zathura-djvu                                           |
 | screenshot    | slurp  grim                                                                        |
-| browser       | firefox                                                                            |
+| browser       | firefox [PotatoFox](https://codeberg.org/awwpotato/PotatoFox)                                                                           |
 | file browser  | [Yazi](https://github.com/sxyazi/yazi)                                             |
 | editor        | neovim  [NvChad](https://nvchad.com/)                                              |
 | launcher      | wofi                                                                               |

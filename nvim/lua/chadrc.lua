@@ -7,6 +7,14 @@ local M = {}
 M.ui = {
 	theme = "chadracula-evondev",
 
+  statusline = {
+    theme = "vscode_colored"
+  },
+
+  cmp = {
+    style = "default"
+  },
+
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },

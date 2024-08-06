@@ -4,7 +4,7 @@
     "margin-top": 5,
     "margin-left": 5,
     "margin-right": 5,
-    "modules-left": ["custom/launcher", "cpu", "memory"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "user"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"],
 
@@ -116,6 +116,14 @@
       ],
       "on-scroll-up": "brightnessctl set 10%-",
       "on-scroll-down": "brightnessctl set +10%"
+    },
+    
+    "user": {
+            "format": "{user} (up {work_d} days ↑)",
+            "interval": 60,
+            "height": 30,
+            "width": 30,
+            "icon": true
     },
 
     "cava": {
