@@ -4,7 +4,7 @@
     "margin-top": 5,
     "margin-left": 5,
     "margin-right": 5,
-    "modules-left": ["custom/launcher", "cpu", "memory", "user"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "temperature"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"],
 
@@ -12,7 +12,6 @@
       "on-click": "activate",
       "format": "{icon}",
       "format-icons": {
-        "default": "",
         "1": "",
         "2": "",
         "3": "",
@@ -21,13 +20,12 @@
         "6": "",
         "7": "",
         "active": "󱓻",
-        "urgent": "󱓻"
+        "default": "",
+        "empty": "",
+        "persistent": ""
       },
       "persistent_workspaces": {
-        "*": 7,
-        "DP-1": 7, // but only three on HDMI-A-1
-        "DP-2": 7,// but only three on HDMI-A-1
-        "eDP-1": 7 // but only three on HDMI-A-1
+        "*": 5
       }
     },
 
@@ -43,13 +41,21 @@
       "max-length": 10
     },
 
+   "temperature": {
+      // "thermal-zone": 2,
+      // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      // "critical-threshold": 80,
+      // "format-critical": "{temperatureC}°C ",
+      "format": "  {temperatureC}°C "
+    },
+
     "tray": {
       "spacing": 10
     },
 
     "clock": {
       "format-alt": "{:%a, %d %b %Y}",
-      "format": "{:%a, %d %b %Y %H:%M}",
+      "format": "{:%d %b %Y %H:%M}",
       "actions":  {
                   "on-click-right": "none",
                   "on-click-forward": "tz_up",
