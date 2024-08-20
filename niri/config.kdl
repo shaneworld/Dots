@@ -26,7 +26,7 @@ input {
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
-    warp-mouse-to-focus
+    // warp-mouse-to-focus
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
@@ -42,9 +42,9 @@ output "DP-2" {
 }
 
 output "eDP-1" {
-    off
-    scale 1.75
-    mode "3072x1920@120.002"
+    // off
+    scale 2.0
+    mode "3072x1920@60.000"
     variable-refresh-rate
 }
 
@@ -163,7 +163,7 @@ spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "clash-verge"
 spawn-at-startup "fcitx5"
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/shane/.config/wallpapers/arch.jpg"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/shane/.config/wallpapers/city.jpg"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "icon-theme" "Papirus"
 
 hotkey-overlay {
@@ -227,7 +227,7 @@ window-rule {
     draw-border-with-background false
     match is-active=true
     match is-active=false
-    // opacity 0.95
+    opacity 0.95
 }
 
 window-rule {

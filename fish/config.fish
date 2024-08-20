@@ -19,7 +19,3 @@ if status is-interactive
   set -gx PATH /home/shane/.local/share/gem/ruby/3.0.0/bin $PATH
   set -gx PATH /home/shane/.luarocks/bin/ $PATH
 end
-
-function sdk
-    bash -c "source '$HOME/.sdkman/bin/sdkman-init.sh'; sdk $argv[1..]"
-end
