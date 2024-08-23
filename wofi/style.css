@@ -39,7 +39,7 @@
 window {
     margin: 5px;
     background-color: @mantle;
-    /*border: 2px solid @crust;*/
+    border: 2px solid @crust;
     border-radius: 15px;
 }
 
@@ -82,4 +82,12 @@ window {
 #entry:selected {
     color: @crust;
     background-color: @lavender;
+}
+
+#img:selected {
+    background: none;
+}
+#text:selected {
+  color: @base;
+  background: none;
 }

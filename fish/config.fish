@@ -6,8 +6,8 @@ if status is-interactive
   set -g fish_greeting
   alias vim "nvim"
   alias y "yazi"
-  alias ls "exa --icons -l"
-  alias ll "exa --icons -al"
+  alias ls "eza --icons -l"
+  alias ll "eza --icons -al"
   alias pc "sudo pacman -Sc"
   alias se "sudoedit"
   # alias cat "bat"
