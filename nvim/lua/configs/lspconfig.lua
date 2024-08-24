@@ -4,6 +4,7 @@ local servers = {
   bashls = {},
   lemminx = {},
   rust_analyzer = {},
+  typst_lsp = {},
   clangd = {},
   jdtls = {},
   texlab = {},

@@ -16,7 +16,6 @@ visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = "my_fifo"
 visualizer_in_stereo = "yes"
 visualizer_fps = 60
-visualizer_sync_interval = 0
 visualizer_color ="white"
 visualizer_type = "spectrum"
 visualizer_look = "▋▋"
