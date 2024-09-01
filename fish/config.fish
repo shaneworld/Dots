@@ -1,15 +1,7 @@
 if status is-interactive
-  status --is-interactive; and source (pyenv init - | source)
   nitch
-  nvm use latest -s
-  rbenv global 3.3.4
-  set -g fish_greeting
-  alias vim "nvim"
-  alias y "yazi"
-  alias ls "eza --icons -l"
-  alias ll "eza --icons -al"
-  alias pc "sudo pacman -Sc"
-  alias se "sudoedit"
+  source /opt/asdf-vm/asdf.fish
+  source /home/shane/.asdf/installs/rust/stable/env.fish
   # alias cat "bat"
   set -x https_proxy http://localhost:7897
   set -x http_proxy http://localhost:7897
@@ -17,5 +9,10 @@ if status is-interactive
   set -gx EDITOR nvim
   set -gx GIT_EDITOR nvim
   set -gx PATH /home/shane/.local/share/gem/ruby/3.0.0/bin $PATH
-  set -gx PATH /home/shane/.luarocks/bin/ $PATH
+  alias vim "nvim"
+  alias y "yazi"
+  alias ls "eza --icons -l"
+  alias ll "eza --icons -al"
+  alias pc "sudo pacman -Sc"
+  alias se "sudoedit"
 end
