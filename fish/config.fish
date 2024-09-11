@@ -1,7 +1,6 @@
 if status is-interactive
   nitch
   source /opt/asdf-vm/asdf.fish
-  source /home/shane/.asdf/installs/rust/stable/env.fish
   # alias cat "bat"
   set -x https_proxy http://localhost:7897
   set -x http_proxy http://localhost:7897

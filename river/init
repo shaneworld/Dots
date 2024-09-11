@@ -23,7 +23,7 @@ riverctl map normal Super+Shift S spawn "grim $SCREEN_FILE"
 riverctl map normal Super+Shift A spawn "grim -g \"\$(slurp)\" $SCREEN_FILE"
 
 #
-riverctl map normal Super Return spawn foot
+riverctl map normal Super Return spawn kitty
 riverctl map normal Super B spawn firefox
 riverctl map normal Super Space spawn "wofi --show drun" 
 

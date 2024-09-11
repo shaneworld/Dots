@@ -163,7 +163,7 @@ spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "clash-verge"
 spawn-at-startup "fcitx5"
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/shane/.config/wallpapers/city.jpg"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/shane/.config/wallpapers/purple.jpg"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "icon-theme" "Papirus"
 
 hotkey-overlay {

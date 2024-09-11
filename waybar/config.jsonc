@@ -54,12 +54,10 @@
     },
 
     "clock": {
-      "format-alt": "{:%a, %d %b %Y}",
-      "format": "{:%d %b %Y %H:%M}",
+      "format": "{:%a, %d %b %Y}",
+      "format-alt": "{:%d %b %Y %H:%M}",
       "actions":  {
                   "on-click-right": "none",
-                  "on-click-forward": "tz_up",
-                  "on-click-backward": "tz_down",
                   "on-scroll-up": "shift_up",
                   "on-scroll-down": "shift_down"
                   }
