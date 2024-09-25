@@ -24,7 +24,7 @@ static const int horizpadbar        = 0;    /* horizontal padding for statusbar 
 static const int vertpadbar         = 12;   /* vertical padding for statusbar */
 
 // Font
-static const char *fonts[]          = { "Kode Mono:style=Regular:size=12","Symbols Nerd Font Mono:style=Regular:size=12" };
+static const char *fonts[]          = { "Kode Mono:style=Regular:size=11","Symbols Nerd Font Mono:style=Regular:size=11" };
 
 static const char *colors[][3]      = {
   /*               fg         bg         border   */

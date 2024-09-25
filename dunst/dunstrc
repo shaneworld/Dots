@@ -196,7 +196,7 @@
     enable_recursive_icon_lookup = true
 
     # Set icon theme (only used for recursive icon lookup)
-    icon_theme = Tela
+    icon_theme = Papirus
     # You can also set multiple icon themes, with the leftmost one being used first.
     # icon_theme = "Adwaita, breeze"
 
@@ -212,7 +212,7 @@
     max_icon_size = 128
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /usr/share/icons/Tela/16x16/status/:/usr/share/icons/Tela/16x16/devices/
+    icon_path = /usr/share/icons/Papirus/16x16/status/:/usr/share/icons/Papirus/16x16/devices/
 
     ### History ###
 
@@ -302,7 +302,7 @@
     # dunst will attempt to calculate an appropriate dpi value for each monitor
     # using the resolution and physical size. This might be useful in setups
     # where there are multiple screens with very different dpi values.
-    per_monitor_dpi = true
+    per_monitor_dpi = false
 
 
 [global]
