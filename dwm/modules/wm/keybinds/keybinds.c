@@ -104,10 +104,9 @@ static const Key keys[] = {
   { MODKEY|ShiftMask, XK_r, spawn, SHCMD(RESET_COLORTEMP) },
 
     //  Screenshots
-  { MODKEY, XK_s, spawn, SHCMD(SCRIPT_SC)}, 
-  { MODKEY|ShiftMask, XK_s, spawn, SHCMD(SCRIPT_SC_SELECTED)}, 
-  { MODKEY|ControlMask, XK_s, spawn, SHCMD(SCRIPT_SC_FOCUSED)}, 
-
+  { MODKEY|ControlMask, XK_s, spawn, SHCMD(SCRIPT_SC)}, 
+  /*{ MODKEY|ShiftMask, XK_s, spawn, SHCMD(SCRIPT_SC_SELECTED)}, */
+  /*{ MODKEY|ControlMask, XK_s, spawn, SHCMD(SCRIPT_SC_FOCUSED)}, */
 
     //  Color picker
   { MODKEY, XK_p, spawn, SHCMD(SCRIPT_PICKER)}, 
@@ -117,6 +116,10 @@ static const Key keys[] = {
   {0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
   {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%")},
   {0, XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle")},
+
+  { MODKEY, XK_a, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
+  { MODKEY, XK_s, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%")},
+  { MODKEY, XK_d, spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle")},
 
     //  Mic
   { 0, XF86XK_AudioMicMute, spawn, SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },

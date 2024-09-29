@@ -2,8 +2,8 @@
 static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", " 󰘸 " };
 
 //  Border/Gaps
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 
 //  Swallow

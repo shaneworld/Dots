@@ -10,4 +10,3 @@ const char SCRIPT_SC[] = "$HOME/.config/dwm/scripts/util/screenshot";
 const char SCRIPT_SC_SELECTED[] = "$HOME/.config/dwm/scripts/util/screenshot-s";
 const char SCRIPT_SC_FOCUSED[] = "$HOME/.config/dwm/scripts/util/screenshot-f";
 const char SCRIPT_PICKER[] = "$HOME/.config/dwm/scripts/util/picker";
-
