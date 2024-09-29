@@ -36,3 +36,7 @@
 
 
 </div>
+
+## Acknowledgements
+
+- Special thanks to [@ferDev27](https://github.com/ferDev27/dwm).
