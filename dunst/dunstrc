@@ -51,7 +51,7 @@ width = (0, 300)
   context = ctrl+shift+period
 
   [urgency_low]
-  foreground = "#83a598"
+  foreground = "#FFFFFF"
   background = "#080214"
   frame_color = "#a151d3"
   timeout = 5

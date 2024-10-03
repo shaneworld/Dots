@@ -8,8 +8,7 @@ if status is-interactive
   set -gx EDITOR nvim
   set -gx GIT_EDITOR nvim
   set -gx GDK_SCALE 2
-  set -gx DISPLAY :0
-  set -gx PATH /home/shane/.local/share/gem/ruby/3.0.0/bin $PATH
+  #set -gx PATH /home/shane/.local/share/gem/ruby/3.0.0/bin $PATH
   alias vim "nvim"
   alias y "yazi"
   alias ls "eza --icons -l"

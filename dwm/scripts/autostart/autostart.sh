@@ -4,7 +4,7 @@ xbanish &
 setxkbmap -option "ctrl:nocaps"
 xset r rate 300 50
 
-xrandr --output eDP --off --output DisplayPort-1 --mode 3840x2160 --rate 60
+# xrandr --output eDP --off --output DisplayPort-1 --mode 3840x2160 --rate 60
 
 # xrandr --output eDP --off --output DisplayPort-0 --mode 3840x2160 --rate 60
 # xrandr --output DisplayPort-0 --left-of eDP --mode 3840x2160 --rate 60
