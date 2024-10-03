@@ -32,6 +32,7 @@
 | tools         | libyaml asdf-vm eza ripgrep tmux obs-studio typst zip unzip |
 | shell         | fish                                                                               | | fish plugins  | [fisher](https://github.com/jorgebucaran/fisher)  [pure](https://github.com/pure-fish/pure)  [z](https://github.com/jethrokuan/z)  [autols](https://github.com/yuys13/autols.fish)  [Done](https://github.com/franciscolourenco/done)  [autopair](https://github.com/jorgebucaran/autopair.fish)|
 | VPN           | [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) [mihomo-party](https://github.com/mihomo-party-org/mihomo-party)             |
+| fish plugins  | [fisher](https://github.com/jorgebucaran/fisher)  [pure](https://github.com/pure-fish/pure)  [z](https://github.com/jethrokuan/z)  [autols](https://github.com/yuys13/autols.fish)  [Done](https://github.com/franciscolourenco/done)  [autopair](https://github.com/jorgebucaran/autopair.fish)|
 | .xinitrc .Xresources | `ln -s ~/.config/.xinitrc ~/.xinitrc`, `ln -s ~/.config/.Xresources ~/.Xresources`  |
 
 
