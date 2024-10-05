@@ -6,7 +6,7 @@
     "margin-top": 5,
     "margin-left": 5,
     "margin-right": 5,
-    "modules-left": ["custom/launcher", "cpu", "memory", "temperature"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "user"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"],
 
@@ -123,7 +123,7 @@
     },
     
     "user": {
-            "format": "{user} (up {work_d} days ↑)",
+            "format": "   {user} ",
             "interval": 60,
             "height": 30,
             "width": 30,
