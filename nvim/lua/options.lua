@@ -2,7 +2,7 @@ require "nvchad.options"
 
 -- add yours here!
 
--- local o = vim.o
+local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
 local autocmd = vim.api.nvim_create_autocmd
 
@@ -20,3 +20,5 @@ autocmd("BufReadPost", {
     end
   end,
 })
+
+o.colorcolumn = "80"

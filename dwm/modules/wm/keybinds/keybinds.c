@@ -104,7 +104,7 @@ static const Key keys[] = {
   { MODKEY|ShiftMask, XK_r, spawn, SHCMD(RESET_COLORTEMP) },
 
     //  Screenshots
-  { MODKEY|ControlMask, XK_s, spawn, SHCMD(SCRIPT_SC)}, 
+  { MODKEY|ControlMask, XK_s, spawn, SHCMD("flameshot gui")}, 
   /*{ MODKEY|ShiftMask, XK_s, spawn, SHCMD(SCRIPT_SC_SELECTED)}, */
   /*{ MODKEY|ControlMask, XK_s, spawn, SHCMD(SCRIPT_SC_FOCUSED)}, */
 
