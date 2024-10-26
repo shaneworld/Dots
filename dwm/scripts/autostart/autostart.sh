@@ -11,7 +11,7 @@ xautolock -time 10 -locker "slock" -killer "systemctl suspend" -killtime 1 &
 # xrandr --output eDP --off --output DisplayPort-0 --mode 3840x2160 --rate 60
 # xrandr --output DisplayPort-0 --left-of eDP --mode 3840x2160 --rate 60
 # feh --bg-scale ~/.config/wallpapers/zigzag.png &
-feh --bg-fill $HOME/.config/wallpapers/arch.jpg
+feh --bg-fill $HOME/.config/wallpapers/tokyo.jpg
 # clash-verge &
 mihomo-party &
 dunst &
