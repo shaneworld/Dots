@@ -1,0 +1,6 @@
+connect.dial_devices="[]"
+audio.crossfade_v2=true
+audio.sync_bitrate_enumeration=1
+audio.play_bitrate_non_metered_migrated=true
+audio.play_bitrate_enumeration=3
+audio.play_bitrate_non_metered_enumeration=3
