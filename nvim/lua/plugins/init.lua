@@ -1,5 +1,10 @@
 return {
   {
+    "folke/which-key.nvim",
+    enabled = false,
+  },
+
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre' -- uncomment for format on save
     config = function()
@@ -101,16 +106,6 @@ return {
   },
 
   {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && npm install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
-  },
-
-  {
     "lervag/vimtex",
     ft = 'tex',
     config = function ()
@@ -132,9 +127,27 @@ return {
   },
 
   {
+    -- Install markdown preview, use npx if available.
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function(plugin)
+      if vim.fn.executable "npx" then
+        vim.cmd("!cd " .. plugin.dir .. " && cd app && npx --yes yarn install")
+      else
+        vim.cmd [[Lazy load markdown-preview.nvim]]
+        vim.fn["mkdp#util#install"]()
+      end
+    end,
+    init = function()
+      if vim.fn.executable "npx" then vim.g.mkdp_filetypes = { "markdown" } end
+    end,
+  },
+
+  {
     'chomosuke/typst-preview.nvim',
     ft = 'typst',
-    version = '0.3.*',
+    version = '1.*',
     build = function() require 'typst-preview'.update() end,
   },
 
@@ -145,7 +158,7 @@ return {
     keys = {
       -- 👇 in this section, choose your own keymappings!
       {
-        "<leader>y",
+        "<leader>cd",
         "<cmd>Yazi<cr>",
         desc = "Open yazi at the current file",
       },
@@ -171,61 +184,5 @@ return {
         show_help = '<f1>', },
     },
   },
-
-  -- flutter
-  {
-      "akinsho/flutter-tools.nvim",
-      event = "VeryLazy",
-      dependencies = {
-          "nvim-lua/plenary.nvim",
-          "stevearc/dressing.nvim",
-      },
-      config = function()
-          require("flutter-tools").setup {
-              flutter_path = nil,
-              flutter_lookup_cmd = "asdf where flutter",
-              fvm = false,
-              widget_guides = { enabled = true },
-              lsp = {
-                  settings = {
-                      showtodos = true,
-                      completefunctioncalls = true,
-                      analysisexcludedfolders = {
-                          vim.fn.expand("$Home/.pub-cache"),
-                      },
-                      renamefileswithclasses = "prompt",
-                      updateimportsonrename = true,
-                      enablesnippets = false,
-                  },
-              },
-              debugger = {
-                  enabled = true,
-                  run_via_dap = true,
-                  exception_breakpoints = {},
-                  register_configurations = function(paths)
-                      local dap = require("dap")
-                      -- See also: https://github.com/akinsho/flutter-tools.nvim/pull/292
-                      dap.adapters.dart = {
-                          type = "executable",
-                          command = paths.flutter_bin,
-                          args = { "debug-adapter" },
-                      }
-                      dap.configurations.dart = {}
-                      require("dap.ext.vscode").load_launchjs()
-                  end,
-              },
-          }
-      end
-  }
-
-
-  -- {
-  --   'MeanderingProgrammer/render-markdown.nvim',
-  --   ft = { "markdown" },
-  --   opts = {},
-  --   dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-  --   -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-  --   dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-  -- }
 }
 
