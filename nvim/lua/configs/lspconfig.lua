@@ -8,6 +8,7 @@ local servers = {
   clangd = {},
   jdtls = {},
   texlab = {},
+  kotlin_language_server = {},
   pyright = {
     settings = {
       python = {

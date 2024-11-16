@@ -7,7 +7,6 @@ if status is-interactive
   set -gx EDITOR nvim
   set -gx GIT_EDITOR nvim
   set -gx GTK_SCALE 2
-  set -gx CHROME_EXECUTABLE /usr/bin/google-chrome-stable
   #set -gx SDL_VIDEODRIVER wayland
   #set -gx QT_QPA_PLATFORM wayland
   #set -gx PATH /home/shane/.local/share/gem/ruby/3.0.0/bin $PATH
