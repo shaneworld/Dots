@@ -1,0 +1,6 @@
+[Default Applications]
+x-scheme-handler/clash=mihomo-party.desktop
+x-scheme-handler/mihomo=mihomo-party.desktop
+image/png=imv.desktop
+image/jpg=imv.desktop
+application/pdf=org.pwmt.zathura.desktop
