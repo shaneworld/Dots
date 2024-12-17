@@ -4,10 +4,9 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   padding: 0;
-  margin: 0;
-  min-height: 0;
   border-radius: 0;
-  background: none;
+  min-height: 0;
+  margin: 0;
   border: none;
   text-shadow: none;
   transition: none;
@@ -16,11 +15,18 @@
 
 /* the whole window */
 window#waybar {
+  background: #1d1d1d;
   color: #fff4d2;
+  padding: 0px 5px;
+  margin: 0;
 }
 
-window#waybar.hidden {
-  opacity: 1;
+.modules-left {
+  padding-left: 5px;
+}
+
+.modules-right {
+  padding-right: 5px;
 }
 
 #custom-rofi,
@@ -47,10 +53,8 @@ window#waybar.hidden {
 #clock {
   font-family: JetBrainsMono Nerd Font Propo;
   font-size: 15px;
-  font-weight: 500;
   color: #222222;
   background: #222222;
-  border: 3px solid #222222;
 }
 
 #window,
@@ -68,11 +72,14 @@ window#waybar.hidden {
 #battery.warning,
 #clock {
   padding-right: 4px;
+  margin: 5px 0px;
 }
 
 #custom-rofi {
+  border: 2px solid #458588;
   background: #83a598;
   padding: 0 6px;
+  margin: 5px 0px;
 }
 
 /* ================================ */
@@ -84,32 +91,40 @@ window#waybar.hidden {
 
 #workspaces button {
   color: #fff4d2;
-  padding: 0 4px;
-  margin: 0px 3px;
+  background: #222222;
+  border: 2px solid #fff4d2;
   min-width: 25px;
+  padding: 0 4px;
+  margin: 5px 3px;
 }
 
 #workspaces button:hover {
   background: #d3869b;
+  border: 2px solid #b16286;
 }
 
 #workspaces button.visible {
+  border: 2px solid #689d6a;
   background: #8ec07c;
 }
 
 #workspaces button.visible:hover {
+  border: 2px solid #689d6a;
   background: #8ec07c;
 }
 
 #workspaces button.active {
+  border: 2px solid #689d6a;
   background: #8ec07c;
 }
 
 #workspaces button.active:hover {
+  border: 2px solid #689d6a;
   background: #8ec07c;
 }
 
 #workspaces button.urgent {
+  border: 2px solid #cc241d;
   background: #ea6962;
 }
 
@@ -119,6 +134,7 @@ window#waybar.hidden {
 
 #window {
   color: #d3869b;
+  border: 2px solid #d3869b;
 }
 
 /* ================================ */
@@ -126,7 +142,8 @@ window#waybar.hidden {
 /* ================================ */
 
 #tray {
-  padding: 0 6px 0 6px;
+  padding: 0 6px;
+  background: #333333;
 }
 
 /* ================================ */
@@ -135,6 +152,7 @@ window#waybar.hidden {
 
 #disk {
   color: #ea6962;
+  border: 2px solid #ea6962;
 }
 
 /* ================================ */
@@ -142,6 +160,7 @@ window#waybar.hidden {
 /* ================================ */
 #cpu {
   color: #e78a4e;
+  border: 2px solid #e78a4e;
 }
 
 /* ================================ */
@@ -149,10 +168,12 @@ window#waybar.hidden {
 /* ================================ */
 #temperature {
   color: #d8a657;
+  border: 2px solid #d8a657;
 }
 
 #temperature.critical {
   color: #cc241d;
+  border: 2px solid #cc241d;
 }
 
 /* ================================ */
@@ -160,6 +181,7 @@ window#waybar.hidden {
 /* ================================ */
 #backlight {
   color: #f6c657;
+  border: 2px solid #f6c657;
 }
 
 /* ================================ */
@@ -167,6 +189,7 @@ window#waybar.hidden {
 /* ================================ */
 #custom-memory {
   color: #458588;
+  border: 2px solid #458588;
 }
 
 /* ================================ */
@@ -174,10 +197,12 @@ window#waybar.hidden {
 /* ================================ */
 #pulseaudio {
   color: #83a598;
+  border: 2px solid #83a598;
 }
 
 #pulseaudio.muted {
   color: #ea6962;
+  border: 2px solid #ea6962;
 }
 
 /* ================================ */
@@ -185,18 +210,22 @@ window#waybar.hidden {
 /* ================================ */
 #battery {
   color: #689d6a;
+  border: 2px solid #689d6a;
 }
 
 #battery.critical {
   color: #cc241d;
+  border: 2px solid #cc241d;
 }
 
 #battery.warning {
   color: #e78a4e;
+  border: 2px solid #e78a4e;
 }
 /* ================================ */
 /*            clock                 */
 /* ================================ */
 #clock {
   color: #8ec07c;
+  border: 2px solid #8ec07c;
 }

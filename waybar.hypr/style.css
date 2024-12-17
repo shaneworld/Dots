@@ -1,0 +1,186 @@
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 14px;
+  min-height: 0;
+  min-width: 0;
+}
+
+window#waybar {
+  /*background-color: #242933;*/
+  background-color: #282828;
+  /*background-color: rgba(36, 41, 51, 1);*/
+  color: #ffffff;
+  border-radius: 8px;
+  border-width: 0.9px;
+  border-color: #83a598;
+  border-style: solid;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+#window {
+  color: #64727d;
+}
+
+@keyframes button_activate {
+	from { opacity: .3 }
+	to { opacity: 1.; }
+}
+
+#workspaces button {
+	border: none;
+	color:  #d4d2a9;
+	padding: 2px 6px;
+	background: transparent;
+	box-shadow: none;
+}
+
+#workspaces button.active {
+	color:  #b8bb26;
+	background: radial-gradient(circle, rgba(20, 48, 187, 0.699) 5%, rgba(36, 39, 54, 0.5) 18%, rgba(132,129,156,0) 23%, rgba(70, 76, 98, 0.201) 24%, rgba(132,129,156,0) 30%);
+	animation: button_activate .2s ease-in-out;
+}
+
+#workspaces button.urgent {
+	color:  #fa9f8e;	
+	background: radial-gradient(circle, rgba(25, 79, 255, 0.3) 20%, rgba(132,129,156,0) 30%);
+}
+
+#workspaces button.persistent {
+	color:  #85909e;
+}
+
+#workspaces button:hover {
+	border: none;
+	background: radial-gradient(circle, rgba(25, 79, 255, 0.1) 20%, rgba(132,129,156,0) 30%);
+}
+
+#workspaces button.active:hover, #workspaces button.urgent:hover {
+	background: inherit;
+}
+
+#cpu {
+  color: #fb4934;
+  font-weight: bold;
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 10px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#cava {
+  color: #fa9f8e;
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 10px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#temperature {
+  color: #fa9f8e;
+  font-weight: bold;
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 10px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#user {
+  color: #fabd2f;
+  font-weight: bold;
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 10px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#memory {
+  color: #b8bb26;
+  font-weight: bold;
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 10px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#custom-launcher {
+  color: #7a95c9;
+  margin: 0 10px 0 15px;
+  font-size: 18px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#tray {
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 10px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#backlight {
+  color: #83a598;
+  font-weight: bold;
+  background-color: #3c3836;
+  margin: 10px 0 10px 10px;
+  padding: 2px 10px;
+  border-radius: 8px 0 0 8px;
+}
+
+#pulseaudio {
+  color: #d3869b;
+  font-weight: bold;
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 0;
+}
+
+#pulseaudio.muted {
+  color: #cc241d;
+  font-weight: bold;
+}
+
+#battery {
+  color: #8ec07c;
+  font-weight: bold;
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 10px 10px 0;
+  border-radius: 0px 8px 8px 0px;
+}
+
+#battery.warning {
+  color: #cc241d;
+  font-weight: bold;
+}
+
+#battery.critical:not(.charging) {
+  font-weight: bold;
+  color: #fb958b;
+}
+
+#workspaces {
+  background-color: #3c3836;
+  padding: 2px 10px;
+  margin: 10px 10px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#clock {
+  color: #fe8019;
+  background-color: #3c3836;
+  font-weight: bold;
+  padding: 2px 10px;
+  margin: 10px 10px;
+  border-radius: 8px 8px 8px 8px;
+}

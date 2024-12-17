@@ -1,35 +1,36 @@
 {
   "layer": "top",
+  "mode":"dock",
   "height": 20,
   "spacing": 5,
-  "margin-top" :5,
-  "margin-right" :8,
-  "margin-left" :8,
+  "margin-top" :3,
+  "margin-right" :3,
+  "margin-left" :3,
 
   "modules-left": [
-    // "custom/rofi",
+    "custom/rofi",
     "sway/workspaces",
-    // "sway/window",
-    // "hyprland/workspaces",
-    "tray"
-    // "hyprland/window"
+    "sway/window",
+    "hyprland/workspaces",
+    "hyprland/window"
   ],
 
-  "modules-center": ["clock"],
-
   "modules-right": [
-    // "disk",
+    "tray",
+    "disk",
     "cpu",
-    "custom/memory",
-    // "temperature",
+    "temperature",
     "backlight",
+    "custom/memory",
     "pulseaudio",
-    "battery"
+    "battery",
+    "clock"
   ],
 
   "custom/rofi": {
-		"format": "<span >󰣇</span>",
-		"on-click": "rofi -show drun",
+		"format": "<span ></span>",
+		"on-click": "rofi -show drun -disable-history -show-icons",
+    "on-click-right": "~/.config/custom_scripts/power.sh",
     "escape" : true,
     "tooltip" : false
 	},
@@ -42,33 +43,21 @@
     "warp-on-scroll": false,
     "format": "{icon}",
     "format-icons": {
-      "1": "<span ></span>",
-      "2": "<span ></span>",
-      "3": "<span ></span>",
-      "4": "<span ></span>",
-      "5": "<span ></span>",
-      "6": "<span ></span>",
-      "7": "<span ></span>",
-      "8": "<span ></span>",
-      "9": "<span >󰘸</span>"
-    },
-    "persistent-workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": [],
-        "6": [],
-        "7": []
-        // "8": [],
-        // "9": []
+      "1": "<span >󰧨</span>",
+      "2": "<span ></span>",
+      "3": "<span >󰈹</span>",
+      "4": "<span ></span>",
+      "5": "<span ></span>",
+      "6": "<span >󰭛</span>",
+      "7": "<span >󱓷</span>",
+      "8": "<span >󰚀</span>"
     }
   },
 
   "sway/window": {
     "format": "<span color='#222222' bgcolor='#d3869b' > 󰣆 </span> {app_id}",
     "separate-outputs": true,
-    "icon":false
+    "tooltip":false
   },
 
   "hyprland/workspaces": {
@@ -92,7 +81,7 @@
   "hyprland/window": {
     "format": "<span color='#222222' bgcolor='#d3869b' > 󰣆 </span> {class}",
     "separate-outputs": true,
-    "icon":false,
+    "icon":false
   },
 
   "tray": {
@@ -117,7 +106,7 @@
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
     "critical-threshold": 70,
     "format": "<span color='#222222' bgcolor='#d8a657' > 󱃃 </span> {temperatureC}°C",
-    "format-critical": "<span color='#222222' bgcolor='#cc241d' > 󰔐 </span> {temperatureC}°C"
+    "format-critical": "<span color='#222222' bgcolor='#cc241d' > 󰔐 </span> {temperatureC}°C",
   },
 
   "backlight": {
@@ -171,8 +160,8 @@
 
   "clock": {
     // "timezone": "America/New_York",
-    "format": "<span color='#222222' bgcolor='#8ec07c' >  </span> {:%a %d %b %H:%M}",
+    "format": "<span color='#222222' bgcolor='#8ec07c' >  </span> {:%a %d %b %H:%M:%S}",
     "tooltip": false,
-    "interval":1
+    "interval":1,
   }
 }
