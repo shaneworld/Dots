@@ -14,7 +14,7 @@ set $menu "rofi -show drun"
 output * bg ~/.config/wallpapers/b-331.jpg fill
 # swaymsg -t get_outputs
 output DP-1 resolution 3840x2160@60Hz scale 1.75
-output eDP-1 disable
+# output eDP-1 disable
 
 ### Idle configuration
 exec swayidle -w \
