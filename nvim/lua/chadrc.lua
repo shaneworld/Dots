@@ -5,8 +5,15 @@
 local M = {}
 
 M.base46 = {
-	theme = "gruvchad",
+	theme = "gruvbox",
   transparency = true,
 }
+
+M.ui = {
+  statusline = {
+    theme = "minimal"
+  }
+}
+
 
 return M

@@ -8,7 +8,7 @@
 
   "modules-left": [
     // "custom/rofi",
-    "sway/workspaces",
+    "hyprland/workspaces",
     // "sway/window",
     // "hyprland/workspaces",
     "tray"
@@ -35,7 +35,7 @@
 	},
 
   // Modules configuration
-  "sway/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": true,
     "active-only": false,
     "all-outputs": true,
@@ -71,33 +71,15 @@
     "icon":false
   },
 
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "active-only": false,
-    "all-outputs": true,
-    "warp-on-scroll": false,
-    "format": "{icon}",
-    "format-icons": {
-      "1": "<span >󰧨</span>",
-      "2": "<span ></span>",
-      "3": "<span >󰈹</span>",
-      "4": "<span ></span>",
-      "5": "<span ></span>",
-      "6": "<span >󰭛</span>",
-      "7": "<span >󱓷</span>",
-      "8": "<span >󰚀</span>"
-    }
-  },
-
   "hyprland/window": {
     "format": "<span color='#222222' bgcolor='#d3869b' > 󰣆 </span> {class}",
     "separate-outputs": true,
-    "icon":false,
+    "icon":false
   },
 
   "tray": {
     "icon-size": 15,
-    "spacing": 8
+    "spacing": 10 
   },
 
   "disk": {
