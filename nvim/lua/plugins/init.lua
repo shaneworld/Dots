@@ -5,6 +5,13 @@ return {
   },
 
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre' -- uncomment for format on save
     config = function()

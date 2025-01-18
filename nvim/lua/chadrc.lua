@@ -5,13 +5,13 @@
 local M = {}
 
 M.base46 = {
-	theme = "gruvbox",
+	theme = "catppuccin",
   transparency = true,
 }
 
 M.ui = {
   statusline = {
-    theme = "minimal"
+    theme = "vscode_colored"
   }
 }
 

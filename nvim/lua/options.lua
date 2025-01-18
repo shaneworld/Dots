@@ -22,3 +22,4 @@ autocmd("BufReadPost", {
 })
 
 o.colorcolumn = "80"
+vim.cmd[[colorscheme tokyonight-moon]]

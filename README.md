@@ -1,8 +1,12 @@
 ## Screenshots
 
-#### Hyprland
+#### Hyprland-catppuccin-theme
 
 ![](./screenshots/hyprland.png)
+
+#### Hyprland-gruvbox-theme
+
+![](./screenshots/Hyprland-gruvbox.png)
 
 #### DWM
 
