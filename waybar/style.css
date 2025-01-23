@@ -1,13 +1,13 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: Material Design Icons, JetBrainsMono Nerd Font;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   min-height: 0;
 }
 
 window#waybar {
-  background-color: rgba(26, 27, 38, 0.5);
+  background-color: rgba(26, 27, 38, 0);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -24,6 +24,8 @@ window#waybar.hidden {
 #clock,
 #cpu,
 #custom-memory,
+#custom-coffeeBuzz,
+#custom-randomWallpeper,
 #tray,
 #workspaces,
 #custom-launcher {
@@ -35,15 +37,39 @@ window#waybar.hidden {
   /*margin-left: 4px;*/
   /*margin-right: 4px;*/
 
-  margin: 4px 10px;
+  /*margin: 5px 10px;*/
+  margin-top: 8px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #cpu {
   color: #c099ff;
+  border-radius: 8px 0px 0px 8px;
+  margin-right: 0px;
+  padding-right: 5px;
 }
 
 #custom-memory {
   color: #4fd6be;
+  margin-left: 0px;
+  padding-left: 5px;
+  border-radius: 0px 8px 8px 0px;
+}
+
+#custom-coffeeBuzz {
+  color: #c099ff;
+  border-radius: 8px 0px 0px 8px;
+  margin-right: 0px;
+  padding-right: 5px;
+}
+
+#custom-randomWallpeper {
+  color: #4fd6be;
+  margin-left: 0px;
+  padding-left: 5px;
+  border-radius: 0px 8px 8px 0px;
 }
 
 #workspaces button {
@@ -80,23 +106,20 @@ window#waybar.hidden {
 }
 
 #custom-launcher {
-  font-size: 18;
+  font-size: 15;
   color: #7a95c9;
   padding-right: 19px;
   padding-left: 14px;
+  margin-left: 8px;
 }
 
 #backlight,
 #battery,
 #pulseaudio {
   background-color: #252733;
-  margin: 4px 0px;
-  padding: 0px 12px;
-}
-
-
-#pulseaudio.muted {
-  color: #fb958b;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  padding: 0px 10px;
 }
 
 #backlight {
@@ -108,6 +131,11 @@ window#waybar.hidden {
   color: #c3e88d;
   border-radius: 8px 0px 0px 8px;
   padding-right: 5px;
+}
+
+
+#pulseaudio.muted {
+  color: #fb958b;
 }
 
 #battery {
@@ -140,8 +168,13 @@ window#waybar.hidden {
 }
 
 #clock {
+  font-size: 14px;
   color: #82aaff;
-  margin: 4px 10px;
+  /*margin: 5px 10px;*/
+  margin-top: 8px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 8px;
 }
 
 tooltip {

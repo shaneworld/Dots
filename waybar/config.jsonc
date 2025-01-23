@@ -32,9 +32,10 @@
     },
 
     "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%b %d %Y}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+      // "timezone": "America/New_York",
+      "format": "   {:%a %d %b %H:%M} ",
+      "tooltip": false,
+      "interval":1
     },
 
     "cpu": {
