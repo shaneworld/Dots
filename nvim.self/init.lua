@@ -219,7 +219,7 @@ require("lazy").setup({
 	  local configs = require("nvim-treesitter.configs")
 
 	  configs.setup({
-		  ensure_installed = { "c", "lua", "vim", "vimdoc", "python", "javascript", "html", "bash" },
+		  ensure_installed = { "c", "lua", "vim", "vimdoc", "python", "bash" },
 		  sync_install = true,
 		  highlight = { enable = true },
 		  indent = { enable = true },
@@ -234,16 +234,16 @@ require("lazy").setup({
 	config = true
   },
 
-  -- todo comments
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  },
+  -- -- todo comments
+  -- {
+  --   "folke/todo-comments.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   opts = {
+  --     -- your configuration comes here
+  --     -- or leave it empty to use the default settings
+  --     -- refer to the configuration section below
+  --   }
+  -- },
 
   {
     -- Install markdown preview, use npx if available.
@@ -264,10 +264,24 @@ require("lazy").setup({
   },
 
   {
-	'chomosuke/typst-preview.nvim',
-	ft = 'typst',
-	version = '1.*',
-	build = function() require 'typst-preview'.update() end,
+    'MeanderingProgrammer/render-markdown.nvim',
+    ft = { "markdown" },
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+    config = function()
+      require('render-markdown').setup({
+          render_modes = true,
+      })
+    end,
+  },
+
+  {
+    'chomosuke/typst-preview.nvim',
+    ft = 'typst',
+    version = '1.*',
+    build = function() require 'typst-preview'.update() end,
   },
 
 
@@ -545,6 +559,7 @@ require("lazy").setup({
  		},
 		tinymist = {},
         html = {},
+        csharp_ls = {},
  		clangd = {
  		  cmd = {
  			'clangd',

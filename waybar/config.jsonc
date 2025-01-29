@@ -1,9 +1,9 @@
 {
     "layer": "top", // Waybar at top layer
     "height": 10,
-    "modules-left": ["custom/launcher", "cpu", "custom/memory", "tray"],
+    "modules-left": ["custom/kernel", "cpu", "custom/memory", "tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["pulseaudio",  "backlight", "battery", "clock"],
+    "modules-right": ["user", "pulseaudio",  "backlight", "battery", "clock"],
 
     "hyprland/workspaces": {
       "disable-scroll": true,
@@ -33,13 +33,13 @@
 
     "clock": {
       // "timezone": "America/New_York",
-      "format": "   {:%a %d %b %H:%M} ",
+      "format": "  {:%a %d %b %H:%M}",
       "tooltip": false,
       "interval":1
     },
 
     "cpu": {
-      "format": "   {usage}% ",
+      "format": "  {usage}%",
       "tooltip": false,
       "interval": 1
     },
@@ -48,17 +48,31 @@
       "exec": "~/.config/custom_scripts/memory_usage.sh",
       "interval": 2,
       "return-type": "json",
-      "format": "   {} "
+      "format": "  {}"
+    },
+
+    "custom/kernel": {
+      "exec": "uname -r",
+      "interval": "once",
+      "format": "  {}"
+    },
+
+    "user": {
+      "format": "  {user}",
+      "interval": 60,
+      //"height": 30,
+      //"width": 30,
+      "icon": true,
     },
 
     "backlight": {
-      "format": " {icon} {percent}% ",
+      "format": "{icon} {percent}%",
       "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
       "tooltip": false
     },
 
     "pulseaudio": {
-      "format": "   {volume}% ",
+      "format": "  {volume}%",
       "format-muted": "   {volume}% ",
       "format-bluetooth": " 󰂰  {volume}% ",
       "format-bluetooth-muted": " 󰂲 {volume}% ",
@@ -80,20 +94,15 @@
         "critical": 20
       },
       "format-icons": ["󰂎","󰁺","󰁻","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
-      "format": " {icon} {capacity}% ",
-      "format-critical": " {icon} {capacity}%!! ",
-      "format-warning": " {icon} {capacity}%",
-      "format-full": " {icon} {capacity}% ",
-      "format-charging": " 󰂅  {capacity}% ",
-      "format-charging-warning": " 󰢝  {capacity}% ",
-      "format-charging-critical": " 󰢜  {capacity}% ",
-      "format-plugged": " 󰂅  {capacity}% ",
-      "format-alt": " 󱧥  {time} ",
+      "format": "{icon} {capacity}%",
+      "format-critical": "{icon} {capacity}%!!",
+      "format-warning": "{icon} {capacity}%",
+      "format-full": "{icon} {capacity}%",
+      "format-charging": "󰂅 {capacity}%",
+      "format-charging-warning": "󰢝 {capacity}%",
+      "format-charging-critical": "󰢜 {capacity}%",
+      "format-plugged": "󰂅 {capacity}%",
+      "format-alt": "󱧥 {time}",
       "tooltip": false
     },
-
-    "custom/launcher": {
-      "format": "",
-      "on-click": "wofi --show drun &"
-    }
 }

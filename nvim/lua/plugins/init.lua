@@ -5,18 +5,35 @@ return {
   },
 
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-
-  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre' -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
+  },
+
+  {
+	"lukas-reineke/indent-blankline.nvim",
+	main = "ibl",
+	---@module "ibl"
+	---@type ibl.config
+	opts = {
+
+	},
+	config = function()
+      local highlight = {
+          "CursorColumn",
+          "Whitespace",
+      }
+      require("ibl").setup {
+          indent = { highlight = highlight, char = "" },
+          whitespace = {
+              highlight = highlight,
+              remove_blankline_trail = false,
+          },
+          scope = { enabled = false },
+      }
+	end
   },
 
   -- These are some examples, uncomment them if you want to see them work!
@@ -101,37 +118,37 @@ return {
     }
   },
 
-  {
-    "folke/todo-comments.nvim",
-    lazy = false,
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  },
+  -- {
+  --   "folke/todo-comments.nvim",
+  --   lazy = false,
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   opts = {
+  --     -- your configuration comes here
+  --     -- or leave it empty to use the default settings
+  --     -- refer to the configuration section below
+  --   }
+  -- },
 
-  {
-    "lervag/vimtex",
-    ft = 'tex',
-    config = function ()
-        vim.g.vimtex_view_general_viewer = 'zathura'
-        vim.g['vimtex_view_method'] = 'zathura'
-        vim.g['vimtex_quickfix_mode'] = 0
-        vim.g['vimtex_log_ignore'] = ({
-          'Underfull',
-          'Overfull',
-          'specifier changed to',
-          'Token not allowed in a PDF string',
-        })
-        vim.g.vimtex_compiler_latexmk_engines = {
-            _ = '-xelatex'
-        }
-        vim.g.tex_comment_nospell = 1
-        vim.g.vimtex_compiler_progname = 'nvr'
-    end,
-  },
+  -- {
+  --   "lervag/vimtex",
+  --   ft = 'tex',
+  --   config = function ()
+  --       vim.g.vimtex_view_general_viewer = 'zathura'
+  --       vim.g['vimtex_view_method'] = 'zathura'
+  --       vim.g['vimtex_quickfix_mode'] = 0
+  --       vim.g['vimtex_log_ignore'] = ({
+  --         'Underfull',
+  --         'Overfull',
+  --         'specifier changed to',
+  --         'Token not allowed in a PDF string',
+  --       })
+  --       vim.g.vimtex_compiler_latexmk_engines = {
+  --           _ = '-xelatex'
+  --       }
+  --       vim.g.tex_comment_nospell = 1
+  --       vim.g.vimtex_compiler_progname = 'nvr'
+  --   end,
+  -- },
 
   {
     -- Install markdown preview, use npx if available.
@@ -148,6 +165,20 @@ return {
     end,
     init = function()
       if vim.fn.executable "npx" then vim.g.mkdp_filetypes = { "markdown" } end
+    end,
+  },
+
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    ft = { "markdown" },
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+    config = function()
+      require('render-markdown').setup({
+          render_modes = true,
+      })
     end,
   },
 
