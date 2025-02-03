@@ -3,6 +3,7 @@ if status is-interactive
   #fastfetch
   set fish_greeting
   source /opt/asdf-vm/asdf.fish
+  source "/home/shane/.asdf/installs/rust/stable/env.fish"
   #set -x https_proxy http://localhost:7892
   #set -x http_proxy http://localhost:7892
   #set -x all_proxy socks5://localhost:7890
