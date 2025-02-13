@@ -45,7 +45,7 @@
     },
 
     "custom/memory": {
-      "exec": "~/.config/custom_scripts/memory_usage.sh",
+      "exec": "~/.config/scripts/memory_usage.sh",
       "interval": 2,
       "return-type": "json",
       "format": "  {}"
