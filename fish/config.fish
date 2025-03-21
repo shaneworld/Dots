@@ -1,6 +1,6 @@
 if status is-interactive
   nitch
-  #fastfetch
+  nvm use latest -s
   set fish_greeting
   #set -x https_proxy http://localhost:7892
   #set -x http_proxy http://localhost:7892
@@ -11,8 +11,8 @@ if status is-interactive
   alias vim "nvim"
   alias y "yazi"
   alias cat "bat"
-  alias ls "eza --icons -l"
-  alias ll "eza --icons -al"
+  alias ls "eza -l"
+  alias ll "eza -al"
   alias pc "sudo pacman -Sc"
   alias se "sudoedit"
 end

@@ -1,20 +1,14 @@
 {
     "layer": "top", // Waybar at top layer
-    "height": 10,
-    "modules-left": ["custom/kernel", "cpu", "custom/memory", "tray"],
-    "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["user", "pulseaudio",  "backlight", "battery", "clock"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["cpu", "custom/separater", "custom/memory", "custom/separater", "pulseaudio", "custom/separater",  "backlight", "custom/separater", "battery", "custom/separater", "clock"],
 
     "hyprland/workspaces": {
       "disable-scroll": true,
       "active-only": false,
       "all-outputs": true,
       "warp-on-scroll": false,
-      "format": "{icon}",
-      "format-icons": {
-        "active": " 󰮯",
-        "default": ""
-      },
       "persistent-workspaces": {
           "1": [],
           "2": [],
@@ -22,8 +16,15 @@
           "4": [],
           "5": [],
           "6": [],
-          "7": []
+          "7": [],
+          "8": [],
+          "9": []
       }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true
     },
 
     "tray": {
@@ -32,14 +33,13 @@
     },
 
     "clock": {
-      // "timezone": "America/New_York",
-      "format": "  {:%a %d %b %H:%M}",
+      "format": "{:%a %d %b %H:%M}",
       "tooltip": false,
       "interval":1
     },
 
     "cpu": {
-      "format": "  {usage}%",
+      "format": "CPU: {usage}%",
       "tooltip": false,
       "interval": 1
     },
@@ -48,7 +48,7 @@
       "exec": "~/.config/scripts/memory_usage.sh",
       "interval": 2,
       "return-type": "json",
-      "format": "  {}"
+      "format": "MEM: {}"
     },
 
     "custom/kernel": {
@@ -62,20 +62,20 @@
       "interval": 60,
       //"height": 30,
       //"width": 30,
-      "icon": true,
+      "icon": true
     },
 
     "backlight": {
-      "format": "{icon} {percent}%",
+      "format": "LIG: {percent}%",
       "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
       "tooltip": false
     },
 
     "pulseaudio": {
-      "format": "  {volume}%",
-      "format-muted": "   {volume}% ",
-      "format-bluetooth": " 󰂰  {volume}% ",
-      "format-bluetooth-muted": " 󰂲 {volume}% ",
+      "format": "VOL: {volume}%",
+      "format-muted": "MUTE",
+      "format-bluetooth": "BLU: {volume}%",
+      "format-bluetooth-muted": "BLU-MUTE",
       "format-source": "{volume}% ",
       "on-click": "pavucontrol &",
       "tooltip": false,
@@ -94,15 +94,15 @@
         "critical": 20
       },
       "format-icons": ["󰂎","󰁺","󰁻","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
-      "format": "{icon} {capacity}%",
-      "format-critical": "{icon} {capacity}%!!",
-      "format-warning": "{icon} {capacity}%",
-      "format-full": "{icon} {capacity}%",
-      "format-charging": "󰂅 {capacity}%",
-      "format-charging-warning": "󰢝 {capacity}%",
-      "format-charging-critical": "󰢜 {capacity}%",
-      "format-plugged": "󰂅 {capacity}%",
-      "format-alt": "󱧥 {time}",
+      "format": "BAT: {capacity}%",
+      "format-critical": "BAT: {capacity}%!!",
+      "format-warning": "BAT: {capacity}%",
+      "format-full": "BAT: {capacity}%",
+      "format-charging": "BAT-C: {capacity}%",
       "tooltip": false
     },
+
+    "custom/separater": {
+      "format": " | "
+    }
 }

@@ -2,7 +2,7 @@
     font = JetBrainsMono NF 11
     allow_markup = yes
     format = "<b>%s</b>\n%b"
-    corner_radius = 5
+    corner_radius = 0
     sort = yes
     indicate_hidden = yes
     alignment = left
