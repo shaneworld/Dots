@@ -1,88 +1,179 @@
-/* Catppuccin Mocha */
-@define-color rosewater       #f5e0dc;
-@define-color flamingo        #f2cdcd;
-@define-color pink            #f5c2e7;
-@define-color mauve           #cba6f7;
-@define-color red             #f38ba8;
-@define-color maroon          #eba0ac;
-@define-color peach           #fab387;
-@define-color yellow          #f9e2af;
-@define-color green           #a6e3a1;
-@define-color teal            #94e2d5;
-@define-color sky             #89dceb;
-@define-color sapphire        #74c7ec;
-@define-color blue            #89b4fa;
-@define-color lavender        #b4befe;
-@define-color text            #cdd6f4;
-@define-color subtext1        #bac2de;
-@define-color subtext0        #a6adc8;
-@define-color overlay2        #9399b2;
-@define-color overlay1        #7f849c;
-@define-color overlay0        #6c7086;
-@define-color surface2        #585b70;
-@define-color surface1        #45475a;
-@define-color surface0        #313244;
-@define-color base            #1e1e2e;
-@define-color mantle          #181825;
-@define-color crust           #11111b;
-
-@define-color white           #ffffff;
-@define-color black           #000000;
-
 * {
-  font-family: "monospace";
+  font-family: Maple Mono NF CN;
   font-size: 14px;
   font-weight: bold;
   min-height: 0;
-  border: 0;
-  border-radius: 0;
 }
 
-
-window#waybar { 
-  background-color: rgba(30, 30, 46, 0.5); 
-  color: @text;    
+window#waybar {
+  background-color: transparent;
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
-#workspaces button {
-  color: @text;    
-  padding: 0 5px;
+window#waybar.hidden {
+  opacity: 0.1;
 }
 
-#workspaces button.empty {
-  color: @text;    
-}
-
-#workspaces button.active {
-  color: @mauve;
-  background-color: @surface2; 
+#window,
+#clock,
+#cpu,
+#memory,
+#tray,
+#workspaces,
+#custom-arch {
+  color: #e5e5e5;
+  border-radius: 8px;
+  padding: 0 12px;
+  background-color: #252733;
+  margin: 4px 0 0 0;
 }
 
 
 #window {
-  padding: 0 15px;
-  background-color: @surface0; 
-  color: @lavender
+  color: #64727d;
+  margin: 4px 0px 0 10px;
 }
 
-window#waybar.empty #window {
-  background-color: transparent;
+#workspaces button {
+  color: #ecd3a0;
+  box-shadow: inset 0 -3px transparent;
+
+  padding-right: 3px;
+  padding-left: 4px;
+
+  margin-left: 0.1em;
+  margin-right: 0em;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
 
+#workspaces button.active {
+  color: #ecd3a0;
+  padding-left: 1px;
+  padding-right: 12px;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#workspaces button.empty {
+  color: #7a95c9;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#workspaces {
+  margin: 4px 10px 0 10px;
+}
+
+#memory,
 #cpu,
-#custom-memory,
-#pulseaudio,
+#custom-arch {
+  background-color: #252733;
+  padding: 0px 12px;
+  border-radius: 0;
+}
+
+#custom-arch {
+  font-size: 16;
+  margin: 4px 0 0 5px;
+  color: #7a95c9;
+  border-radius: 8px 0px 0px 8px;
+}
+
+#cpu {
+  color: #c099ff;
+  padding: 0px 5px;
+}
+
+#memory {
+  color: #4fd6be;
+  border-radius: 0px 8px 8px 0px;
+  margin-right: 10px;
+}
+
 #backlight,
 #battery,
-#clock {
-  padding: 2px 0px;
-  color: @lavender
+#pulseaudio {
+  background-color: #252733;
+  padding: 0px 12px;
+  margin: 4px 0 0 0;
+}
+
+
+#pulseaudio.muted {
+  color: #fb958b;
+}
+
+#backlight {
+  color: #ff966c;
+}
+
+#pulseaudio {
+  color: #c3e88d;
+  border-radius: 8px 0px 0px 8px;
+}
+
+#battery {
+  color: #8fbcbb;
+  border-radius: 0px 8px 8px 0px;
+  margin-right: 10px;
+}
+
+#battery.critical,
+#battery.warning,
+#battery.full,
+#battery.plugged {
+  color: #8fbcbb;
+}
+
+@keyframes blink {
+  to {
+    background-color: rgba(30, 34, 42, 0.5);
+    color: #abb2bf;
+  }
+}
+
+#battery.warning {
+  color: #ecd3a0;
+}
+
+#battery.critical:not(.charging) {
+  color: #fb958b;
 }
 
 #clock {
-  margin-right: 5px;
+  color: #82aaff;
+  margin: 4px 5px 0 0;
+  padding: 0px 12px;
 }
 
-#custom-separater {
-  color: @mauve;
+tooltip {
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #1f232b;
+}
+
+tooltip label {
+  padding: 5px;
+}
+
+label:focus {
+  background-color: #1f232b;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
 }

@@ -1,0 +1,175 @@
+// -*- mode: jsonc -*-
+[
+    {
+        "layer": "top",
+        "position": "left",
+        "width": 50,
+        "margin-left": 10,
+        "margin-right": 2,
+        "margin-top": 8,
+        "margin-bottom": 8,
+        "modules-left": [
+            "custom/arch",
+            "custom/separator",
+            "group/systeminfo",
+            "custom/separator",
+            "hyprland/workspaces"
+        ],
+        "modules-center": [
+        ],
+        "modules-right": [
+            "tray",
+            "custom/separator",
+            "backlight",
+            "custom/space",
+            "pulseaudio",
+            "custom/separator",
+            "group/clock",
+            "custom/separator",
+            "clock#date",
+            "custom/separator",
+            "battery",
+        ],
+
+        "custom/arch": {
+          "interval": "once",
+          "format": " "
+        },
+
+        "hyprland/workspaces": {
+          "disable-scroll": true,
+          "active-only": false,
+          "all-outputs": true,
+          "warp-on-scroll": false,
+          "format": "{icon}",
+          "format-icons": {
+            "active": "󰮯",
+            "default": ""
+          },
+          "persistent-workspaces": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": []
+          }
+        },
+
+        "hyprland/window": {
+          "format": "{}",
+          "max-length": 20,
+          "separate-outputs": true
+        },
+
+
+        "backlight": {
+          "format": " {icon}\n{percent:02}%",
+          "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+          "tooltip": false
+        },
+
+        "pulseaudio": {
+          "format": " \n{volume:02}%",
+          "format-muted": "  \n{volume:02}%",
+          "format-bluetooth": " 󰂰 \n{volume:02}%",
+          "format-bluetooth-muted": " 󰂲 \n{volume:02}%",
+          "on-click": "pavucontrol &",
+          "tooltip": false,
+          "max-volume": 100
+        },
+
+        "tray": {
+            "icon-size": 15,
+            "spacing": 20,
+        },
+
+        "clock": {
+            "format": "{:%H\n%M}",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "interval": 1,
+        },
+
+        "clock#sec": {
+            "format": "{:%S}",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "interval": 1,
+        },
+
+        "group/clock": {
+            "orientation": "vertical",
+            "modules": ["clock", "clock#sec"],
+            "drawer": {
+                "transition-duration": 500,
+            },
+        },
+
+        "clock#date": {
+            "format": "{:%a, %b%d}",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "rotate": 90,
+        },
+
+        "battery": {
+            "states": {
+                "warning": 30,
+                "critical": 10,
+            },
+            "format": "{capacity:02}%",
+            "format-plugged": " \n{capacity:02}%",
+            "format-charging": " \n{capacity:02}%",
+            "format-warning": " \n{capacity:02}%",
+            "format-critical": " \n{capacity:02}%",
+            "tooltip-format": "power: {capacity:02}%\ntime: {time}",
+            "interval": 3,
+        },
+
+        "cpu": {
+            "interval": 1,
+            "format": "{usage:02}%",
+            "states": {
+                "critical": 80,
+            },
+        },
+
+        "memory": {
+            "interval": 1,
+            "format": "{percentage:02}%",
+            "tooltip-format": "{used:0.1f}GiB used",
+            "states": {
+                "critical": 80,
+            },
+        },
+
+        "memory#swap": {
+            "interval": 1,
+            "format": "{swapPercentage:02}%",
+            "tooltip-format": "{swapUsed:0.1f}GiB used",
+            "states": {
+                "critical": 80,
+            },
+        },
+
+        "group/systeminfo": {
+            "orientation": "vertical",
+            "modules": ["cpu", "custom/space", "memory", "custom/space", "memory#swap"] 
+        },
+
+        "hyprland/language": {
+            "format-en": "en",
+            "format-ar": "ar",
+        },
+
+        "custom/separator": {
+            "format": " | ",
+            "tooltip": false,
+            "rotate": 90,
+        },
+
+        "custom/space": {
+            "format": " ",
+            "tooltip": false,
+            "rotate": 90,
+        },
+
+    },
+]

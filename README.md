@@ -32,8 +32,8 @@
 | status bar    | waybar dwmblocks(dwm)                                           |
 | terminal & shell      | kitty fish                               |
  fish plugins  | [fisher](https://github.com/jorgebucaran/fisher)  [z](https://github.com/jethrokuan/z) [autols](https://github.com/yuys13/autols.fish) [Done](https://github.com/franciscolourenco/done) [autopair](https://github.com/jorgebucaran/autopair.fish) [nvm.fish](https://github.com/jorgebucaran/nvm.fish)(for node.js)|
-| vpn           | [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)   |
-| .xinitrc .Xresources (dwm) | `ln -s ~/.config/.xinitrc ~/.xinitrc`, `ln -s ~/.config/.Xresources ~/.Xresources`  |
+| vpn           | [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) [v2raya](https://v2raya.org)|
+| .xinitrc .Xresources (dwm) | `ln -s ~/.config/xinitrc ~/.xinitrc`, `ln -s ~/.config/Xresources ~/.Xresources`  |
 
 </div>
 

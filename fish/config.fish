@@ -7,10 +7,8 @@ if status is-interactive
   #set -x all_proxy socks5://localhost:7890
   set -gx EDITOR nvim
   set -gx GIT_EDITOR nvim
-  #set -x PATH /home/shane/.asdf/installs/rust/stable/bin /home/shane/.cargo/bin/ $PATH
   alias vim "nvim"
   alias y "yazi"
-  alias cat "bat"
   alias ls "eza -l"
   alias ll "eza -al"
   alias pc "sudo pacman -Sc"
