@@ -6,19 +6,19 @@ return {
 
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre' -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save,
     config = function()
       require "configs.conform"
     end,
   },
 
   {
-	"lukas-reineke/indent-blankline.nvim",
-	main = "ibl",
-	---@module "ibl"
-	---@type ibl.config
-	opts = {
-	},
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {
+    },
   },
 
   -- These are some examples, uncomment them if you want to see them work!
@@ -35,7 +35,7 @@ return {
   	opts = {
   	},
   },
-  --
+
   {
   	"nvim-treesitter/nvim-treesitter",
   	opts = {
@@ -75,33 +75,40 @@ return {
   },
 
   {
-    'NvChad/nvim-colorizer.lua',
-    lazy = true,
-    event = { 'BufReadPre', 'BufNewFile' },
-    opts = {
-      filetypes = { '*' },
-      user_default_options = {
-        RGB = true,           -- #RGB hex codes
-        RRGGBB = true,        -- #RRGGBB hex codes
-        names = false,        -- 'Name' codes like Blue or blue
-        RRGGBBAA = true,      -- #RRGGBBAA hex codes
-        AARRGGBB = true,      -- 0xAARRGGBB hex codes
-        rgb_fn = false,       -- CSS rgb() and rgba() functions
-        hsl_fn = false,       -- CSS hsl() and hsla() functions
-        css = true,           -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-        css_fn = true,        -- Enable all CSS *functions*: rgb_fn, hsl_fn
-        -- Available modes for `mode`: foreground, background,  virtualtext
-        mode = 'virtualtext', -- Set the display mode.
-        -- Available methods are false / true / "normal" / "lsp" / "both"
-        -- True is same as normal
-        tailwind = true,
-        sass = { enable = false },
-        virtualtext = '■',
+      "catgoose/nvim-colorizer.lua",
+      event = "BufReadPre",
+      opts = { -- set to setup table
       },
-      -- all the sub-options of filetypes apply to buftypes
-      buftypes = {},
-    }
   },
+
+  -- {
+  --   'NvChad/nvim-colorizer.lua',
+  --   lazy = true,
+  --   event = { 'BufReadPre', 'BufNewFile' },
+  --   opts = {
+  --     filetypes = { '*' },
+  --     user_default_options = {
+  --       RGB = true,           -- #RGB hex codes
+  --       RRGGBB = true,        -- #RRGGBB hex codes
+  --       names = false,        -- 'Name' codes like Blue or blue
+  --       RRGGBBAA = true,      -- #RRGGBBAA hex codes
+  --       AARRGGBB = true,      -- 0xAARRGGBB hex codes
+  --       rgb_fn = false,       -- CSS rgb() and rgba() functions
+  --       hsl_fn = false,       -- CSS hsl() and hsla() functions
+  --       css = true,           -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+  --       css_fn = true,        -- Enable all CSS *functions*: rgb_fn, hsl_fn
+  --       -- Available modes for `mode`: foreground, background,  virtualtext
+  --       mode = 'virtualtext', -- Set the display mode.
+  --       -- Available methods are false / true / "normal" / "lsp" / "both"
+  --       -- True is same as normal
+  --       tailwind = true,
+  --       sass = { enable = false },
+  --       virtualtext = '■',
+  --     },
+  --     -- all the sub-options of filetypes apply to buftypes
+  --     buftypes = {},
+  --   }
+  -- },
 
   -- {
   --   "folke/todo-comments.nvim",
