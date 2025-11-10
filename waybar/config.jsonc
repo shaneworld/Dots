@@ -1,17 +1,11 @@
 {
     "layer": "top", // Waybar at top layer
-    "height": 10,
-    "modules-left": ["custom/arch", "cpu", "memory", "tray", "hyprland/window"],
-    "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["pulseaudio",  "backlight", "battery", "clock"],
+    // "height": 10,
+    "modules-left": ["niri/workspaces"],
+    "modules-center": ["niri/window"],
+    "modules-right": ["tray", "cpu", "memory", "pulseaudio",  "backlight", "battery", "clock"],
 
-    // "modules-center": ["custom/arch", "cpu", "memory", "tray", "hyprland/workspaces", "pulseaudio",  "backlight", "battery", "clock"],
-
-    "hyprland/workspaces": {
-      "disable-scroll": true,
-      "active-only": false,
-      "all-outputs": true,
-      "warp-on-scroll": false,
+    "niri/workspaces": {
       "format": "{icon}",
       "format-icons": {
         "active": " 󰮯",
@@ -30,19 +24,18 @@
       }
     },
 
-    "hyprland/window": {
+    "niri/window": {
       "format": "{}",
-      "max-length": 20,
+      // "max-length": 20,
       "separate-outputs": true
     },
 
     "tray": {
       "icon-size": 15,
-      "spacing": 10 
+      "spacing": 12 
     },
 
     "clock": {
-      // "timezone": "America/New_York",
       "format": "  {:%a %d %b %H:%M}",
       "tooltip": false,
       "interval":1

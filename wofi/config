@@ -1,8 +1,0 @@
-mode=drun
-allow_images=false
-image_size=30
-term=kitty
-insensitive=true
-location=center
-no_actions=true
-prompt=Search

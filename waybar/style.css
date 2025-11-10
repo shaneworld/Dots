@@ -1,14 +1,13 @@
 * {
-  font-family: Maple Mono NF CN;
+  font-family: FiraCode Nerd Font;
   font-size: 14px;
   font-weight: bold;
   min-height: 0;
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: #1e1e2e;
   color: #ffffff;
-  transition-property: background-color;
   transition-duration: 0.5s;
 }
 
@@ -16,35 +15,29 @@ window#waybar.hidden {
   opacity: 0.1;
 }
 
-#window,
+#backlight,
+#battery,
+#pulseaudio,
 #clock,
 #cpu,
 #memory,
-#tray,
 #workspaces,
-#custom-arch {
+#tray {
   color: #e5e5e5;
-  border-radius: 8px;
   padding: 0 12px;
-  background-color: #252733;
-  margin: 4px 0 0 0;
 }
-
 
 #window {
   color: #64727d;
-  margin: 4px 0px 0 10px;
 }
 
 #workspaces button {
   color: #ecd3a0;
   box-shadow: inset 0 -3px transparent;
 
-  padding-right: 3px;
-  padding-left: 4px;
+  padding-right: 11px;
+  padding-left: 12px;
 
-  margin-left: 0.1em;
-  margin-right: 0em;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
 
@@ -69,44 +62,18 @@ window#waybar.hidden {
   margin-right: 0;
 }
 
-#workspaces {
-  margin: 4px 10px 0 10px;
-}
-
-#memory,
-#cpu,
-#custom-arch {
-  background-color: #252733;
-  padding: 0px 12px;
-  border-radius: 0;
-}
-
 #custom-arch {
   font-size: 16;
-  margin: 4px 0 0 5px;
   color: #7a95c9;
-  border-radius: 8px 0px 0px 8px;
 }
 
 #cpu {
   color: #c099ff;
-  padding: 0px 5px;
 }
 
 #memory {
   color: #4fd6be;
-  border-radius: 0px 8px 8px 0px;
-  margin-right: 10px;
 }
-
-#backlight,
-#battery,
-#pulseaudio {
-  background-color: #252733;
-  padding: 0px 12px;
-  margin: 4px 0 0 0;
-}
-
 
 #pulseaudio.muted {
   color: #fb958b;
@@ -118,13 +85,10 @@ window#waybar.hidden {
 
 #pulseaudio {
   color: #c3e88d;
-  border-radius: 8px 0px 0px 8px;
 }
 
 #battery {
   color: #8fbcbb;
-  border-radius: 0px 8px 8px 0px;
-  margin-right: 10px;
 }
 
 #battery.critical,
@@ -136,7 +100,6 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: rgba(30, 34, 42, 0.5);
     color: #abb2bf;
   }
 }
@@ -151,22 +114,14 @@ window#waybar.hidden {
 
 #clock {
   color: #82aaff;
-  margin: 4px 5px 0 0;
-  padding: 0px 12px;
 }
 
 tooltip {
-  border-radius: 15px;
   padding: 15px;
-  background-color: #1f232b;
 }
 
 tooltip label {
   padding: 5px;
-}
-
-label:focus {
-  background-color: #1f232b;
 }
 
 #tray > .passive {
@@ -175,5 +130,4 @@ label:focus {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
 }
